@@ -1,4 +1,4 @@
-# Dashboard Design Using MVC 
+# Dashboard Design Using ASP.NET MVC 
 ![image alt](https://github.com/RizoanunNasa/Dashboard-Design-Using-MVC/blob/57b467c910b17cbbdf01e4b9a912e266038dddb7/Dashboard%20Design%20Using%20MVC.png)
 ## Overview
 This project is a web-based dashboard built using the ASP.NET MVC framework. The application provides a modern, responsive interface to manage users, track key metrics, and visualize reports through charts. It includes several functionalities such as CRUD operations for user management, real-time data updates, and a dynamic UI that is optimized for both desktop and mobile devices.
