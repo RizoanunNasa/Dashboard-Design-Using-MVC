@@ -1,0 +1,33 @@
+﻿@model DashboardApplication.Models.User
+
+@{
+    ViewBag.Title = "Edit User";
+}
+
+<h2>Edit User</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CreatedAt)
+        @Html.EditorFor(model => model.CreatedAt)
+        @Html.ValidationMessageFor(model => model.CreatedAt)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}

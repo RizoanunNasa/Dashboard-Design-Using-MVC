@@ -1,0 +1,15 @@
+﻿@model DashboardApplication.Models.User
+
+@{
+    ViewBag.Title = "User Details";
+}
+
+<h2>User Details</h2>
+
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>CreatedAt:</strong> @Model.CreatedAt</p>
+
+<a href="@Url.Action("EditUser", new { id = Model.Id })" class="btn btn-warning">Edit</a>
+<a href="@Url.Action("DeleteUser", new { id = Model.Id })" class="btn btn-danger">Delete</a>
+<a href="@Url.Action("Index")" class="btn btn-default">Back to List</a>

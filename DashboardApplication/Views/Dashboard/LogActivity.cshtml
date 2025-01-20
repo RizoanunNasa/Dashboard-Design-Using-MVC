@@ -1,0 +1,28 @@
+﻿@model DashboardApplication.Models.Activity
+
+@{
+    ViewBag.Title = "Log Activity";
+}
+
+<h2>Log Activity</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <!-- Correct usage of LabelFor for UserId -->
+        @Html.LabelFor(model => model.UserId)
+        @Html.DropDownListFor(model => model.UserId, (SelectList)ViewBag.Users, "Select a User")
+        @Html.ValidationMessageFor(model => model.UserId)
+    </div>
+
+    <div class="form-group">
+        <!-- Correct usage of LabelFor for Description (instead of Action) -->
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Log Activity</button>
+}
